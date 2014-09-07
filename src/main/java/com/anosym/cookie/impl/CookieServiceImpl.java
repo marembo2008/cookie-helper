@@ -170,7 +170,8 @@ public class CookieServiceImpl implements Serializable, CookieService {
         }
     }
 
-    public void setPrimitiveOrPrimitiveWrappers(final Field field, final String value, final Object cookieObject) throws IllegalArgumentException, IllegalAccessException {
+    public void setPrimitiveOrPrimitiveWrappers(final Field field, final String value, final Object cookieObject) throws
+            IllegalArgumentException, IllegalAccessException {
 
         final Class<?> type = field.getType();
         Object val = null;
@@ -220,7 +221,8 @@ public class CookieServiceImpl implements Serializable, CookieService {
         }
     }
 
-    private void setIndividualHttpFieldCookies(@Nonnull final Object cookieObj) throws IllegalArgumentException, IllegalAccessException {
+    private void setIndividualHttpFieldCookies(@Nonnull final Object cookieObj) throws IllegalArgumentException,
+            IllegalAccessException {
         final Field[] fields = cookieObj.getClass().getDeclaredFields();
         Arrays.sort(fields, new Comparator<Field>() {
 
